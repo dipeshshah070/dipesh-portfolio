@@ -210,8 +210,8 @@ export const achievements: Achievement[] = [];
 export type Certification = { issuer: string; name: string; link?: string };
 
 export const certifications: Certification[] = [
-  { issuer: 'CompTIA', name: 'CompTIA Security+' },
-  { issuer: 'CompTIA', name: 'CompTIA Network+' },
+  { issuer: 'CompTIA', name: 'CompTIA Security+', link: 'https://www.credly.com/badges/a3b35006-6137-4680-a5ae-24dfc56aba6e/public_url' },
+  { issuer: 'CompTIA', name: 'CompTIA Network+', link: 'https://www.credly.com/badges/e3fe7eca-f8cc-4ed6-b5bc-bdfacb932210/public_url' },
   { issuer: 'ThinkCloudly', name: 'SOC Bootcamp Certificate' },
 ];
 
