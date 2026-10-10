@@ -41,7 +41,7 @@ The static site is written to `dist/` and can be deployed as-is to Vercel, Netli
 | Profile order (Recruiter / Developer / Creative) | `viewerProfiles` |
 | Opening studio card text | `profile.originalLabel` |
 
-**Resume:** replace `public/assets/Dipesh_Shah_Resume.pdf` (or change `profile.resumePdf` / `profile.resumeFileName`).
+**Resume:** edit [`resume/resume.html`](resume/resume.html), then run `npm run resume` to regenerate `public/assets/Dipesh_Shah_Resume.pdf` (uses your installed Chrome or Edge; set `CHROME_PATH` to override).
 
 **Photo:** replace `pic1.jpeg` (high-res photo). The photo keeps its background and gets feathered edges. To use a background-removed version instead, add `pic.png` (a cutout with the same framing). Then run:
 
