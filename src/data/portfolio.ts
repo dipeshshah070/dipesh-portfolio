@@ -17,10 +17,10 @@ export const profile = {
   tagline: ['Full Stack Java', 'Cloud', 'Microservices'],
   /** Shown as a short badge in the hero meta row. */
   badge: 'JAVA',
-  yearsExperience: '7+',
-  careerStart: '2019',
+  yearsExperience: '3+',
+  careerStart: '2023',
   intro:
-    'Full Stack Java Engineer at Goldman Sachs with 7+ years building enterprise applications — Java, Spring Boot and microservices on the backend, Angular and React on the front end, shipped cloud-native on AWS with Docker, Kubernetes and Terraform.',
+    'Full Stack Java Engineer at Goldman Sachs with 3+ years building enterprise applications — Java, Spring Boot and microservices on the backend, Angular and React on the front end, shipped cloud-native on AWS with Docker, Kubernetes and Terraform.',
   location: 'Dallas, Texas',
   country: 'United States',
   email: 'shah.dipesh201@gmail.com',
@@ -72,20 +72,6 @@ export const experience = [
       'Integrated AWS services such as S3, EC2, RDS, Lambda and CloudWatch to build cloud-native, scalable solutions.',
       'Developed modular UI features in Angular 16 using RxJS, lazy loading and best-practice state management.',
       'Optimized MongoDB queries using indexes and aggregation frameworks for high-volume data operations.',
-    ],
-  },
-  {
-    company: 'American Airlines',
-    role: 'Full Stack Java Developer',
-    place: 'Fort Worth, Texas',
-    period: 'May 2019 – August 2023',
-    points: [
-      'Developed enterprise applications using Java, Spring Boot, Spring MVC, REST APIs and microservices architecture.',
-      'Implemented full-stack features using React + Spring Boot, enhancing user experience and reducing load times with efficient API integration.',
-      'Preprocessed high-volume streaming data and transmitted it through Kafka topics, enabling real-time analytics.',
-      'Automated AWS infrastructure provisioning using CloudFormation and Terraform.',
-      'Designed Kubernetes deployments using Helm charts, implementing HPA and autoscaling strategies.',
-      'Deployed applications using Jenkins pipelines, Tomcat servers and AWS resources; monitored with DataDog.',
     ],
   },
 ];
@@ -162,35 +148,6 @@ export const projects: Project[] = [
     ],
     palette: { from: '#1a0d02', via: '#8a4a07', to: '#0a0806', accent: '#ffb547' },
     motif: 'flow',
-  },
-  {
-    id: 'american-airlines',
-    title: 'American Airlines',
-    year: '2019 – 2023',
-    genre: 'Aviation • Full Stack • Streaming Data',
-    logline: 'React + Spring Boot features, real-time Kafka pipelines and AWS infrastructure as code.',
-    stack: ['Java', 'Spring Boot', 'React', 'TypeScript', 'Kafka', 'Oracle', 'Kubernetes', 'Terraform', 'AWS'],
-    build: [
-      'Developed enterprise applications using Java, Spring Boot, Spring MVC, REST APIs and microservices architecture.',
-      'Implemented full-stack features using React + Spring Boot, reducing load times with efficient API integration.',
-      'Preprocessed high-volume streaming data and transmitted it through Kafka topics, enabling real-time analytics.',
-      'Automated AWS infrastructure provisioning using CloudFormation and Terraform.',
-      'Designed Kubernetes deployments using Helm charts, implementing HPA and autoscaling strategies.',
-    ],
-    features: [
-      'Real-time analytics over Kafka',
-      'Infrastructure as code (Terraform, CloudFormation)',
-      'Helm + HPA autoscaling on Kubernetes',
-      'Jenkins CI/CD pipelines',
-      'DataDog monitoring & incident diagnostics',
-    ],
-    metrics: [
-      { value: '4+ yrs', label: 'May 2019 – Aug 2023' },
-      { value: 'Kafka', label: 'real-time streaming analytics' },
-      { value: 'IaC', label: 'Terraform & CloudFormation' },
-    ],
-    palette: { from: '#2a0610', via: '#7a0f24', to: '#0b0710', accent: '#ff3d5a' },
-    motif: 'shield',
   },
 ];
 
@@ -337,32 +294,24 @@ export const skillCategories: SkillCategory[] = [
  * where the skill appears in the roles and certifications on the resume.
  */
 export const skillEvidence: Record<string, string[]> = {
-  Java: ['Goldman Sachs', 'PNC Bank (Java 17)', 'American Airlines'],
-  TypeScript: ['American Airlines (React)', 'PNC Bank (Angular 16)'],
-  'PL/SQL': ['American Airlines — Oracle stored procedures'],
-  'Spring Boot': ['Goldman Sachs', 'PNC Bank', 'American Airlines'],
-  'Spring MVC': ['PNC Bank', 'American Airlines'],
+  Java: ['Goldman Sachs', 'PNC Bank (Java 17)'],
+  TypeScript: ['PNC Bank (Angular 16)'],
+  'Spring Boot': ['Goldman Sachs', 'PNC Bank'],
+  'Spring MVC': ['PNC Bank'],
   'Spring Batch': ['PNC Bank — XML ingestion & scheduled workflows'],
   'Spring AOP': ['PNC Bank — logging, metrics & transactions'],
   'Hibernate / JPA': ['PNC Bank — Spring Data JPA with Oracle'],
-  Kafka: ['PNC Bank — event-driven microservices', 'American Airlines — real-time analytics'],
-  Microservices: ['PNC Bank', 'American Airlines'],
-  'REST APIs': ['American Airlines'],
+  Kafka: ['PNC Bank — event-driven microservices'],
+  Microservices: ['PNC Bank'],
   Angular: ['PNC Bank — Angular 16'],
   RxJS: ['PNC Bank — Angular 16'],
-  React: ['American Airlines — React + Spring Boot'],
-  AWS: ['PNC Bank — EKS, S3, EC2, RDS, Lambda, CloudWatch', 'American Airlines'],
+  AWS: ['PNC Bank — EKS, S3, EC2, RDS, Lambda, CloudWatch'],
   Docker: ['PNC Bank'],
-  Kubernetes: ['PNC Bank — AWS EKS', 'American Airlines — Helm & HPA'],
-  Helm: ['American Airlines'],
-  Terraform: ['American Airlines'],
-  CloudFormation: ['American Airlines'],
-  Jenkins: ['American Airlines'],
-  Oracle: ['PNC Bank', 'American Airlines'],
-  MongoDB: ['PNC Bank — indexes & aggregations', 'American Airlines'],
-  JUnit: ['PNC Bank', 'American Airlines'],
-  Mockito: ['PNC Bank', 'American Airlines'],
-  DataDog: ['American Airlines'],
+  Kubernetes: ['PNC Bank — AWS EKS'],
+  Oracle: ['PNC Bank'],
+  MongoDB: ['PNC Bank — indexes & aggregations'],
+  JUnit: ['PNC Bank'],
+  Mockito: ['PNC Bank'],
   'AWS Security Hub': ['CompTIA Security+'],
   IAM: ['CompTIA Security+'],
 };
@@ -409,44 +358,12 @@ export const seasons: Season[] = [
   },
   {
     number: 2,
-    title: 'Taking Flight',
-    period: '2019 – 2023',
-    synopsis: 'Full Stack Java Developer at American Airlines, Fort Worth, Texas.',
-    episodes: [
-      {
-        code: 'S02 E01',
-        title: 'The Full-Stack Developer',
-        description: 'Enterprise applications with Java, Spring Boot and microservices, and React + Spring Boot features that cut load times.',
-        tags: ['Java', 'Spring Boot', 'React', 'TypeScript'],
-        runtime: 'May 2019 – Aug 2023',
-        palette: crimson,
-      },
-      {
-        code: 'S02 E02',
-        title: 'The Streamer',
-        description: 'Preprocessed high-volume streaming data through Kafka topics for real-time analytics, with Spring Boot consumers applying business rules.',
-        tags: ['Kafka', 'Real-time', 'Spring Boot'],
-        runtime: 'American Airlines',
-        palette: amber,
-      },
-      {
-        code: 'S02 E03',
-        title: 'The Infrastructure Builder',
-        description: 'Automated AWS provisioning with CloudFormation and Terraform; Kubernetes deployments with Helm, HPA and autoscaling.',
-        tags: ['Terraform', 'Kubernetes', 'Helm', 'AWS'],
-        runtime: 'American Airlines',
-        palette: ocean,
-      },
-    ],
-  },
-  {
-    number: 3,
     title: 'Banking on Java',
     period: '2023 – 2026',
     synopsis: 'Full Stack Java Developer at PNC Bank, Dallas, Texas.',
     episodes: [
       {
-        code: 'S03 E01',
+        code: 'S02 E01',
         title: 'The Modernizer',
         description: 'Microservices on Java 17 — records, sealed classes and enhanced switch expressions — with Spring Data JPA and Hibernate on Oracle.',
         tags: ['Java 17', 'Spring Boot', 'JPA', 'Oracle'],
@@ -454,7 +371,7 @@ export const seasons: Season[] = [
         palette: amber,
       },
       {
-        code: 'S03 E02',
+        code: 'S02 E02',
         title: 'The Event Architect',
         description: 'Asynchronous, event-driven communication with Kafka and Spring Batch jobs for XML ingestion and large-scale data workflows.',
         tags: ['Kafka', 'Spring Batch', 'Event-driven'],
@@ -462,7 +379,7 @@ export const seasons: Season[] = [
         palette: jade,
       },
       {
-        code: 'S03 E03',
+        code: 'S02 E03',
         title: 'The Cloud Deployer',
         description: 'Containerized Spring services with Docker and deployed to AWS EKS, integrating S3, EC2, RDS, Lambda and CloudWatch.',
         tags: ['Docker', 'AWS EKS', 'Kubernetes'],
@@ -472,13 +389,13 @@ export const seasons: Season[] = [
     ],
   },
   {
-    number: 4,
+    number: 3,
     title: 'Enter: Goldman Sachs',
     period: '2026 – Present',
     synopsis: 'Full Stack Java Engineer at Goldman Sachs, working across Java and the cloud.',
     episodes: [
       {
-        code: 'S04 E01',
+        code: 'S03 E01',
         title: 'The Engineer',
         description: 'Full stack Java engineering on enterprise applications at Goldman Sachs.',
         tags: ['Java', 'Full Stack'],
@@ -486,7 +403,7 @@ export const seasons: Season[] = [
         palette: ocean,
       },
       {
-        code: 'S04 E02',
+        code: 'S03 E02',
         title: 'The Cloud Engineer',
         description: 'Building, deploying and running services on cloud infrastructure.',
         tags: ['Cloud'],
@@ -496,13 +413,13 @@ export const seasons: Season[] = [
     ],
   },
   {
-    number: 5,
+    number: 4,
     title: "What's Next",
     period: 'In production',
     synopsis: 'The next arc of the story.',
     episodes: [
       {
-        code: 'S05 E01',
+        code: 'S04 E01',
         title: 'The Next Chapter',
         description: 'Going deeper on cloud-native architecture, event-driven systems and cloud security.',
         tags: ['Cloud-Native', 'Event-Driven', 'Security'],
@@ -518,13 +435,13 @@ export type TopPick = { label: string; title: string; detail: string; palette: P
 export const topPicks: TopPick[] = [
   { label: 'Now streaming', title: 'Goldman Sachs', detail: 'Full Stack Java Engineer • since Apr 2026', palette: ocean },
   { label: 'Primary language', title: 'Java', detail: 'Java 8 / 11 / 17 / 21', palette: amber },
-  { label: 'In the industry', title: '7+ Years', detail: 'Enterprise engineering since 2019', palette: crimson },
+  { label: 'In the industry', title: '3+ Years', detail: 'Enterprise engineering since 2023', palette: crimson },
   { label: 'Banking season', title: 'PNC Bank', detail: 'Java 17 microservices • 2023 – 2026', palette: jade },
-  { label: 'Aviation season', title: 'American Airlines', detail: 'React + Spring Boot • 2019 – 2023', palette: violet },
+  { label: 'Frontend', title: 'Angular 16', detail: 'RxJS • lazy loading • state management', palette: violet },
   { label: 'Backbone', title: 'Spring Boot', detail: 'Microservices, Batch, AOP, Security', palette: amber },
   { label: 'Event-driven', title: 'Kafka', detail: 'Real-time analytics & async microservices', palette: crimson },
   { label: 'Cloud', title: 'AWS', detail: 'EKS • EC2 • S3 • RDS • Lambda • CloudWatch', palette: ocean },
-  { label: 'Infrastructure as code', title: 'Terraform', detail: 'with CloudFormation, Helm & Kubernetes', palette: jade },
+  { label: 'Data workflows', title: 'Spring Batch', detail: 'XML ingestion & scheduled jobs', palette: jade },
   { label: 'Security credential', title: 'Security+', detail: 'CompTIA Security+ & Network+', palette: violet },
 ];
 
@@ -544,14 +461,9 @@ export const introSlides: IntroSlide[] = [
     chips: ['Java', 'Spring Boot', 'Kafka', 'Angular', 'React', 'AWS'],
   },
   {
-    kicker: 'Season 3',
+    kicker: 'Season 2',
     title: 'PNC Bank',
     lines: ['Full Stack Java Developer · 2023 – 2026', 'Java 17 microservices · Kafka · Spring Batch · AWS EKS'],
-  },
-  {
-    kicker: 'Season 2',
-    title: 'American Airlines',
-    lines: ['Full Stack Java Developer · 2019 – 2023', 'React + Spring Boot · real-time Kafka · Terraform'],
   },
   {
     kicker: 'Cloud',
