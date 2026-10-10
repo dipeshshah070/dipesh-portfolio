@@ -108,6 +108,7 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
             )}
 
             {/* impact */}
+            {project.metrics.length > 0 && (
             <motion.section variants={block} className="mt-12">
               <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-crimson-2">Result / Impact</h3>
               <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl bg-white/10 sm:grid-cols-3 lg:grid-cols-5">
@@ -127,6 +128,7 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
                 ))}
               </div>
             </motion.section>
+            )}
 
             <div className="mt-12 grid gap-10 lg:grid-cols-[3fr_2fr]">
               <motion.section variants={block}>
@@ -152,7 +154,7 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
                   </div>
                 </motion.section>
                 <motion.section variants={block}>
-                  <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-crimson-2">Key Features</h3>
+                  <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-crimson-2">Highlights</h3>
                   <ul className="space-y-2.5">
                     {project.features.map((f) => (
                       <li key={f} className="flex items-start gap-3 text-sm text-bone/85">
@@ -166,6 +168,7 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
             </div>
 
             {/* more like this */}
+            {more.length > 0 && (
             <motion.section variants={block} className="mt-14 border-t border-white/10 pt-8">
               <h3 className="mb-4 font-sans text-lg font-semibold text-bone">More Originals</h3>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -188,6 +191,7 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
                 ))}
               </div>
             </motion.section>
+            )}
           </motion.div>
         </motion.div>
       </div>

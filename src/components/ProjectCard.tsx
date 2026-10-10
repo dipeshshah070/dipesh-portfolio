@@ -53,7 +53,7 @@ export default function ProjectCard({ project, index, onOpen }: { project: Proje
               ))}
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-3">
-              <span className="flex min-h-11 items-center gap-2 rounded-md bg-bone px-5 text-sm font-bold text-ink transition group-hover:bg-white">▶ View Project</span>
+              <span className="flex min-h-11 items-center gap-2 rounded-md bg-bone px-5 text-sm font-bold text-ink transition group-hover:bg-white">▶ Watch</span>
               {project.github && (
                 <a
                   href={project.github}

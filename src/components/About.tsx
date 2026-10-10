@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
-import { education, experience, profile } from '../data/portfolio';
+import { education, experience, profile, seasons } from '../data/portfolio';
 import { EASE, SectionHeading, Tilt } from './fx';
 
 export default function About() {
   const facts = [
-    { k: 'Now', v: 'B.Tech, AI & ML', s: `${education[0].school} · ${education[0].score}` },
-    { k: 'Training', v: `${experience[0].role}, ${experience[0].company}`, s: experience[0].period },
-    { k: 'Primary language', v: 'Java', s: 'with Python, C, C++' },
-    { k: 'Based in', v: profile.location, s: 'India' },
+    { k: 'Now', v: `${experience[0].role}, ${experience[0].company}`, s: experience[0].period },
+    { k: 'Previously', v: experience.slice(1).map((x) => x.company).join(' · '), s: `${profile.careerStart} – 2026` },
+    { k: 'Education', v: education[0].degree.replace('Bachelor of Science — ', 'B.S. '), s: `${education[0].school} · ${education[0].score}` },
+    { k: 'Based in', v: profile.location, s: profile.country },
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function About() {
               sizes="(max-width: 1024px) 90vw, 40vw"
               alt={profile.portrait.alt}
               loading="lazy"
-              className="absolute bottom-0 left-1/2 h-[92%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
+              className="absolute inset-0 h-full w-full object-cover object-top"
             />
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/90 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
@@ -39,7 +39,7 @@ export default function About() {
                 <p className="text-[10px] font-bold tracking-[0.3em] text-crimson-2">STARRING</p>
                 <p className="font-display text-3xl leading-none text-bone">{profile.displayName}</p>
               </div>
-              <span className="rounded border border-white/30 px-1.5 text-[10px] font-bold text-bone">S01–S05</span>
+              <span className="rounded border border-white/30 px-1.5 text-[10px] font-bold text-bone">S01–S{String(seasons.length).padStart(2, '0')}</span>
             </div>
           </div>
         </Tilt>

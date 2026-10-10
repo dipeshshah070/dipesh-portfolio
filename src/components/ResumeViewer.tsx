@@ -22,7 +22,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="font-serif text-3xl italic leading-tight text-bone">Every episode, on one page.</p>
           <p className="mt-3 text-sm leading-relaxed text-mist">
-            Education, training, projects, achievements and {certifications.length} certifications — view it here or take a copy with you.
+            Education, experience, skills and {certifications.length} certifications — view it here or take a copy with you.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <Magnetic className="w-full">
@@ -38,7 +38,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
             <Magnetic className="w-full">
               <a
                 href={profile.resumePdf}
-                download="Sushmita_Dasari_Resume.pdf"
+                download={profile.resumeFileName}
                 data-cursor="link"
                 className="glass flex min-h-12 w-full items-center justify-center gap-2 rounded-md px-6 text-[15px] font-semibold text-bone transition hover:bg-white/15"
               >
@@ -117,7 +117,8 @@ export function ResumeSheet() {
             <div key={e.school} className="mb-4">
               <div className="flex flex-wrap justify-between gap-x-3">
                 <p className="text-sm font-semibold text-bone">
-                  {e.school}, {e.place}
+                  {e.school}
+                  {e.place && `, ${e.place}`}
                 </p>
                 <p className="text-xs text-smoke">{e.period}</p>
               </div>
@@ -129,7 +130,7 @@ export function ResumeSheet() {
 
           <H>Work Experience</H>
           {experience.map((x) => (
-            <div key={x.company}>
+            <div key={x.company} className="mb-5">
               <div className="flex flex-wrap justify-between gap-x-3">
                 <p className="text-sm font-semibold text-bone">
                   {x.company} — {x.role}
@@ -147,16 +148,6 @@ export function ResumeSheet() {
             </div>
           ))}
 
-          <H>Projects</H>
-          {projects.map((p) => (
-            <div key={p.id} className="mb-3">
-              <div className="flex flex-wrap justify-between gap-x-3">
-                <p className="text-sm font-semibold text-bone">{p.title}</p>
-                <p className="text-xs text-smoke">{p.year}</p>
-              </div>
-              <p className="text-xs text-mist">{p.stack.join(', ')}</p>
-            </div>
-          ))}
         </div>
 
         <div>
@@ -170,7 +161,7 @@ export function ResumeSheet() {
             ))}
           </div>
 
-          <H>Achievements</H>
+          {achievements.length > 0 && <H>Achievements</H>}
           <ul className="space-y-2">
             {achievements.map((a) => (
               <li key={a.id} className="text-xs leading-relaxed text-mist">

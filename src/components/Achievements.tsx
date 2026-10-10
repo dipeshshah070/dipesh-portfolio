@@ -21,8 +21,9 @@ export default function Achievements() {
 
   return (
     <>
-      <SectionHeading kicker="Awards season" title="Top Moments" />
+      <SectionHeading kicker="Awards season" title={achievements.length ? 'Top Moments' : 'Certified'} />
 
+      {achievements.length > 0 && (
       <div className="gutter grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 [perspective:1400px]">
         {achievements.map((a, i) => (
           <motion.div
@@ -62,9 +63,10 @@ export default function Achievements() {
           </motion.div>
         ))}
       </div>
+      )}
 
       {/* certifications rail */}
-      <div className="mt-16">
+      <div className={achievements.length ? 'mt-16' : ''}>
         <div className="gutter mb-2 flex flex-wrap items-end justify-between gap-2">
           <h3 className="font-sans text-lg font-semibold text-bone sm:text-2xl">
             Certified <span className="text-mist">· {certifications.length} credentials</span>
@@ -77,9 +79,9 @@ export default function Achievements() {
               <motion.a
                 key={c.name}
                 href={c.link}
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="link"
+                target={c.link ? '_blank' : undefined}
+                rel={c.link ? 'noreferrer' : undefined}
+                data-cursor={c.link ? 'link' : undefined}
                 className="group relative flex w-[230px] shrink-0 snap-start flex-col justify-between rounded-xl bg-ink-2 p-4 ring-1 ring-white/10 transition hover:-translate-y-1 hover:ring-white/30"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +90,7 @@ export default function Achievements() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-crimson-2">{c.issuer}</span>
-                  <span className="text-sm text-smoke transition group-hover:text-bone">↗</span>
+                  {c.link && <span className="text-sm text-smoke transition group-hover:text-bone">↗</span>}
                 </div>
                 <p className="mt-6 text-sm font-medium leading-snug text-bone">{c.name}</p>
               </motion.a>
